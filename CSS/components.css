@@ -1,0 +1,123 @@
+/* Reusable Unified Premium Component Button Core System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+.btn-sm { padding: 8px 16px; font-size: 11px; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--text-dark);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+}
+
+.btn-outline {
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background-color: rgba(201, 168, 76, 0.04);
+}
+
+.btn:active {
+  transform: scale(0.97) !important;
+  transition: transform var(--transition-fast) !important;
+}
+
+/* Reusable Architectural Unified Card Design Frame System */
+.premium-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-md);
+}
+
+/* Clean Input Fields Custom Architecture UI Layout Form Engine */
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.form-input-wrapper label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.custom-field {
+  width: 100%;
+  background-color: rgba(7, 8, 10, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.custom-field:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.1);
+}
+
+/* Structural Components Modules */
+.btn-whatsapp-fab {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: 52px;
+  height: 52px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-index-fab);
+  transition: transform var(--transition-bounce);
+}
+.btn-whatsapp-fab:hover { transform: translateY(-4px) scale(1.05); }
+
+.toast-component {
+  position: fixed;
+  top: calc(var(--header-height) + var(--space-md));
+  left: 50%;
+  transform: translateX(-50%) translateY(-32px);
+  z-index: var(--z-index-toast);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-premium);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-smooth);
+  font-size: 14px;
+}
+.toast-component.active { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+
